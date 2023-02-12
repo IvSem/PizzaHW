@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Піцерія Domino's Pizza</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!--<script src="./code/index.js" type="module"></script>-->
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <a href="./index.html"
+          ><img id="logo" src="./img/pizza/Carlo.png" alt="Логотип Папа Карло"
+        /></a>
+        <nav>
+          <ul>
+            <li>Конструктор піцци</li>
+            <li>Картопляне меню</li>
+            <li>Салати</li>
+            <li>Напої</li>
+            <li>Доставка</li>
+            <li>Зворотній зв'язок</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1>Збери піццу своєї мрії</h1>
+      <sub>перетягни всi необхiднi iнгредiєнти</sub>
+      <div id="banner">Отримай знижку 30%!<br /><button>Отримати</button></div>
+      <h3>Розмiр:</h3>
+      <form id="pizza" action="">
+        <label class="radio"
+          ><input
+            type="radio"
+            class="radioIn"
+            id="small"
+            name="size"
+            value="small"
+          /><span class="fakeRadio"></span><span>Маленька</span></label
+        >
+        <label class="radio"
+          ><input
+            type="radio"
+            class="radioIn"
+            id="mid"
+            name="size"
+            value="mid"
+          /><span class="fakeRadio"></span><span>Середня</span></label
+        >
+        <label class="radio"
+          ><input
+            type="radio"
+            class="radioIn"
+            id="big"
+            name="size"
+            value="big"
+            checked="true"
+          /><span class="fakeRadio"></span><span>Велика</span></label
+        >
+      </form>
+      <div class="table-wrapper">
+        <div class="table">
+          <img
+            src="./img/pizza/klassicheskij-bortik_1556622914630.png"
+            alt="Корж класичний"
+          />
+        </div>
+
+        <div class="ingridients">
+          <h3>Соуси:</h3>
+          <div>
+            <img
+              draggable="true"
+              class="draggable"
+              id="sauceClassic"
+              src="./img/pizza/sous-klassicheskij_1557758736353.png"
+              alt=""
+            />
+            <span>Кетчуп</span>
+          </div>
+          <div>
+            <img
+              draggable="true"
+              class="draggable"
+              id="sauceBBQ"
+              src="./img/pizza/sous-bbq_155679418013.png"
+              alt=""
+            />
+            <span>BBQ</span>
+          </div>
+          <div>
+            <img
+              draggable="true"
+              class="draggable"
+              id="sauceRikotta"
+              src="./img/pizza/sous-rikotta_1556623391103.png"
+              alt=""
+            />
+            <span>Рiкотта</span>
+          </div>
+          <h3>Топінги:</h3>
+          <div>
+            <img
+              draggable="true"
+              class="draggable"
+              id="moc1"
+              src="./img/pizza/mocarela_1556623220308.png"
+              alt=""
+            />
+            <span>Сир звичайний</span>
+          </div>
+          <div>
+            <img
+              draggable="true"
+              class="draggable"
+              id="moc2"
+              src="./img/pizza/mocarela_1556785182818.png"
+              alt=""
+            />
+            <span>Сир фета</span>
+          </div>
+          <div>
+            <img
+              draggable="true"
+              class="draggable"
+              id="moc3"
+              src="./img/pizza/mocarela_1556785198489.png"
+              alt=""
+            />
+            <span>Моцарелла</span>
+          </div>
+          <div>
+            <img
+              draggable="true"
+              class="draggable"
+              id="telya"
+              src="./img/pizza/telyatina_1556624025747.png"
+              alt=""
+            />
+            <span>Телятина</span>
+          </div>
+          <div>
+            <img
+              draggable="true"
+              class="draggable"
+              id="vetch1"
+              src="./img/pizza/vetchina.png"
+              alt=""
+            />
+            <span>Помiдори</span>
+          </div>
+          <div>
+            <img
+              draggable="true"
+              class="draggable"
+              id="vetch2"
+              src="./img/pizza/vetchina_1556623556129.png"
+              alt=""
+            />
+            <span>Гриби</span>
+          </div>
+        </div>
+      </div>
+      <div class="result">
+        <div class="price">
+          <p>Цiна: <span id="price"></span></p>
+        </div>
+        <div class="sauces">
+          <div>
+            Соуси:
+            <div id="sauce"></div>
+          </div>
+        </div>
+        <div class="topings">
+          <div>
+            Топiнги:
+            <div id="topping"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <h2>Пiдтверди замовлення</h2>
+      <sub>введи данi i пiдтверди замовлення</sub>
+      <form id="info" action="#">
+        <div class="grid">
+          <label for="name">Ваше ім'я</label>
+          <input placeholder="Iм'я" name="name" type="text" />
+          <label for="phone">Номер телефону</label>
+          <input placeholder="+380505050500" name="phone" type="tel" />
+          <label for="email">Електронна пошта</label>
+          <input placeholder="email@email.com" name="email" type="email" />
+          <input class="button" name="cancel" type="reset" value="Зкинути" />
+
+          <button type="submit" class="button button_rel" id="btnSubmit">
+            Підтвердити замовлення >>
+            <a class="succesLat" href="./succesLetter.html"></a>
+          </button>
+        </div>
+      </form>
+      <address id="date"></address>
+    </footer>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
